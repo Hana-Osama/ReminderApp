@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../model/todo.dart';
+import '../model/reminder.dart';
 import '../constants/colors.dart';
-import '../widgets/todo_items.dart';
+import '../widgets/reminder_items.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'All ToDos',
+                          'Reminder List',
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
             child: Row(children: [
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     bottom: 20,
                     right: 20,
                     left: 20,
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
                   child: TextField(
                     controller: _todoController,
                     decoration: InputDecoration(
-                        hintText: 'Add a new todo item',
+                        hintText: 'Add a new reminder item',
                         border: InputBorder.none),
                   ),
                 ),
@@ -211,8 +211,7 @@ class _HomeState extends State<Home> {
           child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.network(
-                  'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fbiancabarratt%2F2019%2F01%2F30%2Fhow-to-write-a-to-do-list-that-youll-actually-stick-to%2F&psig=AOvVaw1ZeejAA-byQexOxFzoQUgd&ust=1726683253058000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJDuo-7KyogDFQAAAAAdAAAAABAE') //asset('assets/images/avatar.jpeg'),
-              ),
+                  'https://cdn-icons-png.flaticon.com/512/8476/8476682.png')),
         ),
       ]),
     );
